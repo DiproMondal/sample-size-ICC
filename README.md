@@ -3,7 +3,5 @@
 
 # To run the code you would need to install R
 ```
-function test() {
-  console.log("notice the blank line before this function?");
-}
+source(https://raw.githubusercontent.com/DiproMondal/sample-size-ICC/main/one-way-sample-size-ICC.r)
 ```
