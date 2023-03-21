@@ -1,9 +1,5 @@
 rm(list=ls())
-if(!require(shiny)){
-    install.packages("shiny")
-    library(shiny)
-}
-
+library(shiny)
 if(!require(latex2exp)){
     install.packages("latex2exp")
     library(latex2exp)
