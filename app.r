@@ -1,9 +1,5 @@
 rm(list=ls())
 library(shiny)
-if(!require(latex2exp)){
-    install.packages("latex2exp")
-    library(latex2exp)
-}
 
 options(digits = 3)
 
@@ -231,15 +227,15 @@ SampleSize<-function(criterion_specification,
 
 ## Width of Confidence interval method
 
-#---------------------Calculate ICC from variance  ----------------------------#
+#Calculate ICC from variance
 ICC_theory <- function(sigma_s,# Subject measurements standard deviation 
                        sigma_e# Error standard deviation
 ){
   return(sigma_s^2/(sigma_s^2+sigma_e^2))
 }
-#------------------------------------------------------------------------------#
 
-#---------------------ICC Estimate from data ----------------------------------#
+
+#ICC Estimate from data
 ICC_estimate<-function(data,  MLE=FALSE){
   data[is.na(data)]<-0
   k <- ncol(data)
@@ -626,14 +622,14 @@ observed_assurance<- function(samplesize, rho, width, k, alpha=0.05, nsims= 2.5e
 }
 choices <- c('Wald.S', 'Wald.F', 'Wald.Ze', 'F',
              'Z.S', 'Z.F', 'Z.Ze', 'ZF')
-names(choices) <- c(TeX("$$Wald_S$$"),
-                    TeX("$$Wald_F$$"),
-                    TeX("$$Wald_{Ze}$$"),
-                    TeX("$$F$$"),
-                    TeX("$$Z_{S}$$"),
-                    TeX("$$Z_{F}$$"),
-                    TeX("$$Z_{Ze}$$"),
-                    TeX("$$ZF_{\\rho}$$"))
+names(choices) <- c("Wald method with Swiger variance",
+                    "Wald method with Fisher variance",
+                    "Wald method with Zerbe variance",
+                    "Searle (F) method",
+                    "Normalization with Swiger variance",
+                    "Normalization with Fisher variance",
+                    "Normalization with Zerbe variance",
+                    "Normalization of Searle method")
 color_plate<- c('blue', 'violet', 'red', 'black', 
                       'lightblue', 'pink', 'orange', 'grey')
                       names(color_plate)<-choices
