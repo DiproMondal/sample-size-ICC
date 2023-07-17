@@ -725,7 +725,7 @@ color_plate<- c('blue', 'violet', 'red', 'black',
                                                                  conditionalPanel(
                                                                    condition = "input.SSizeProc == 'Assurance Probability Approach'",
                                                                    list(sliderInput("assurance", label="Assurance Probability", min = 0.5, max = 0.999, step = 0.05, value=0.5),
-                                                                        sliderInput("targetwidthA", label="Target Width", min = 0.05, max = 0.999, step = 0.025, value=0.2),
+                                                                        sliderInput("targetwidthA", label="Target Width", min = 0.05, max = 1.0, step = 0.025, value=0.2),
                                                                         sliderInput("targetICCA", label="Value of ICC", min = 0.0, max = 0.999, step = 0.025, value=0.9),
                                                                         numericInput("nmaxA", label = "Maximum value of n:",min=5000, max = 2.5e5, step=1000, value= 5000)
                                                                    )
