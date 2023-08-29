@@ -803,7 +803,7 @@ shinyApp(
                                                 h4("Normalized Searle method:"),
                                                 p("The F-statistic can be normalized as,",
                                                   withMathJax("$$Z(F(\\hat{\\rho})) = \\frac{1}{2}ln\\frac{1+(k-1)\\hat{\\rho}}{1-\\hat{\\rho}} \\sim \\mathcal{N}\\bigg\\{\\frac{1}{2}ln\\frac{1+(k-1)\\rho}{1-\\rho}, \\frac{1}{2}\\bigg(\\frac{1}{n-1}+\\frac{1}{n(k-1)}\\bigg)\\bigg\\}$$"),
-                                                  "The confidence interval on this Fisher transformed scale is",
+                                                  "The confidence interval on this log-transformed scale is",
                                                   withMathJax("$$L_{ZF},U_{ZF} = Z(F(\\hat{\\rho})) \\mp z_{1-\\alpha/2}{\\sqrt{var(Z(F(\\hat{\\rho})))}}$$"),
                                                   "The confidence limits for \u03c1 can be obtained directly by back-transforming as,",
                                                   withMathJax("$$L,U= \\frac{exp(2L_{ZF})-1}{exp(2L_{ZF})+k-1}, \\frac{exp(2U_{ZF})-1}{exp(2U_{ZF})+k-1}$$")
