@@ -791,8 +791,8 @@ shinyApp(
                                                   withMathJax("$$L,U =  \\frac{F(\\hat{\\rho})/F_u-1}{F(\\hat{\\rho})/F_u+k-1},\\frac{F(\\hat{\\rho})/F_L-1}{F(\\hat{\\rho})/F_L+k-1}$$")
                                                 ),
                                                 h4("Normalized ICC method:"),
-                                                p("Fisher transformation can be applied to the ICC such that the transformed ICC approximately follows a normal distribution.Applying this transformation leads to",
-                                                  withMathJax("$$Z(\\hat{\\rho}) = \\frac{1}{2}ln\\frac{1+(k-1)\\hat{\\rho}}{1-\\hat{\\rho}} \\sim \\mathcal{N}\\bigg\\{\\frac{1}{2}ln\\frac{1+\\rho}{1-{\\rho}}, var(Z(\\hat{\\rho}))\\bigg\\}$$"), 
+                                                p("Log transformation can be applied to the ICC such that the transformed ICC approximately follows a normal distribution. Applying this transformation leads to",
+                                                  withMathJax("$$Z(\\hat{\\rho}) = \\frac{1}{2}ln\\frac{1+\\hat{\\rho}}{1-\\hat{\\rho}} \\sim \\mathcal{N}\\bigg\\{\\frac{1}{2}ln\\frac{1+\\rho}{1-{\\rho}}, var(Z(\\hat{\\rho}))\\bigg\\}$$"), 
                                                   "The variance can be obtained using the Delta method to one of the variances defined above, as, ",
                                                   withMathJax("$$var(Z(\\hat{\\rho}))=\\frac{var(\\hat{\\rho})}{(1-\\rho^2)^2}$$"),
                                                   "We compute the confidence interval around normalized \u03c1 as,",
