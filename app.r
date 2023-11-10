@@ -699,7 +699,7 @@ shinyApp(
                                            conditionalPanel(
                                              condition = "input.SSizeProc == 'Width of Confidence Interval Approach'",
                                              list(sliderInput("targetwidth", label="Target Width", min = 0.05, max = 1, step = 0.05, value=0.2),
-                                                  sliderInput("targetICC", label="Value of ICC", min = 0.001, max = 0.999, step = 0.025, value=0.8),
+                                                  sliderInput("targetICC", label="Value of ICC", min = 0.001, max = 0.999, step = 0.001, value=0.8),
                                                   numericInput("nsims", label = "Maximum value of n:",min=5000, max = 5e7, step=2500, value= 5000)
                                              )
                                            ),
